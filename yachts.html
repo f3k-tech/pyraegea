@@ -14,7 +14,7 @@ title: About
         <tbody>
           {% for yacht in site.data.yachts[yachts] %}
           <tr>
-            <td style="width: 60%">{{ yacht.name }}</td>
+            <td style="width: 60%">{{ yacht.spec }}</td>
             <td>
               <div class="progress" style="height: 0.75rem !important">
                 <div
@@ -22,9 +22,8 @@ title: About
                   role="progressbar"
                   aria-label="skills"
                   aria-valuenow="{{ yacht.value }}"
-                  style="width: {{ item.proficien }}%"
                   aria-valuemin="0"
-                  aria-valuemax="100"
+                  aria-valuemax="{{ yacht.max_value }}"
                 ></div>
               </div>
             </td>
