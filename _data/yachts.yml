@@ -5,7 +5,12 @@ yachts:
   - The Horny Siren
 
 Glittery Nipples:
-  - length: 39
-  - luxury: 80
-  - pax: 2
-  - maxpax: 6
+  - name: Length
+    value: 39
+    max_value: 54
+  - name: Luxury
+    value: 80
+    max_value: 100
+  - name: Crew
+    value: 2
+    max_value: 6

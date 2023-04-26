@@ -6,27 +6,31 @@ title: About
 <div
   class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4"
 >
-  {% for yacht in site.data.yachts.yachts %}
+  {% for categorie in site.data.yachts.yachts %}
   <div class="col">
     <div class="card text-bg-light mb-3 w-auto">
-      <div class="card-header">{{ yacht }}</div>
+      <div class="card-header">{{ yachts }}</div>
       <table class="table align-middle bg-white">
         <tbody>
+          {% for yacht in site.data.yachts[yachts] %}
           <tr>
-            <td style="width: 60%">{{ site.data.yachts[yacht].length }}</td>
+            <td style="width: 60%">{{ yacht.name }}</td>
             <td>
               <div class="progress" style="height: 0.75rem !important">
                 <div
                   class="progress-bar bg-info"
                   role="progressbar"
                   aria-label="skills"
-                  aria-valuenow="{{ site.data.yachts[yacht].length }}"
+                  aria-valuenow="{{ yacht.value }}"
+                  style="width: {{ item.proficien }}%"
                   aria-valuemin="0"
-                  aria-valuemax="54"
+                  aria-valuemax="100"
                 ></div>
               </div>
             </td>
           </tr>
+
+          {% endfor %}
         </tbody>
       </table>
     </div>
