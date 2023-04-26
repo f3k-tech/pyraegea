@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div
+        class="row"
+        style="
+          height: 20vh;
+          background-image: url({{ page.cover | default: "/assets/img/circuitboard.png" }});
+          background-position: center;
+          background-size: cover;
+        "
+      ></div>
+      <div class="row">{% include navigation.html %}</div>
+      <div class="row">
+        <div class="col-2">{% include personal.html %}</div>
+        <div class="col" style="max-width: 1600px">{{ content }}</div>
+        <div class="col-2">Column</div>
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>
