@@ -14,3 +14,6 @@ Glittery Nipples:
   - spec: Crew
     value: 2
     max_value: 6
+  - spec: Price Indication
+    value: 500
+    max_value: 800
