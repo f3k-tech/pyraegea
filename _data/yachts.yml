@@ -1,8 +1,13 @@
 yachts:
-  - Glittery Nipples
-  - The Horny Siren
-  - The Trippin' Tramp
-  - White Smoke
+  - name: Glittery Nipples
+    skipper: Glittery Nipples
+  - name: The Horny Siren
+    skipper: WheresMyWine?
+  - name: The Trippin' Tramp
+    skipper: Big Cookie
+  - name: White Smoke
+    skipper: Peter
+    
 
 Glittery Nipples:
   - spec: Length

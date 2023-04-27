@@ -3,14 +3,14 @@ layout: default
 title: Yachts
 ---
 
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
   {% for yacht in site.data.yachts.yachts %}
   <div class="col">
     <div class="card text-bg-light mb-3 w-auto">
-      <div class="card-header">{{ yacht }}</div>
+      <div class="card-header">{{ yacht.name }}</div>
       <table class="table align-middle bg-white">
         <tbody>
-          {% for yacht_data in site.data.yachts[yacht] %}
+          {% for yacht_data in site.data.yachts[yacht.name] %}
           <tr>
             <td style="width: 60%">{{ yacht_data.spec }}</td>
             <td>
@@ -28,6 +28,9 @@ title: Yachts
             </td>
           </tr>
           {% endfor %}
+          <tr>
+            <td>Skipper:</td>
+            <td>{{ yacht.skipper }}</td>
         </tbody>
       </table>
     </div>
