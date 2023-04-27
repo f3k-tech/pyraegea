@@ -5,11 +5,11 @@ title: Skippers
 <h1>Skippers</h1>
 
 <ul>
-  {% for author in site.authors %}
+  {% for skipper in site.skippers %}
     <li>
-      <h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
-      <h3>{{ author.position }}</h3>
-      <p>{{ author.content | markdownify }}</p>
+      <h2><a href="{{ skipper.url }}">{{ skipper.name }}</a></h2>
+      <h3>{{ skipper.yacht }}</h3>
+      <p>{{ skipper.content | markdownify }}</p>
     </li>
   {% endfor %}
 </ul>

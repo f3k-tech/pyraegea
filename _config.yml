@@ -1,13 +1,13 @@
 collections:
-  authors:
+  skippers:
     output: true
 
 defaults:
   - scope:
       path: ""
-      type: "authors"
+      type: "skippers"
     values:
-      layout: "author"
+      layout: "skipper"
   - scope:
       path: ""
       type: "posts"
