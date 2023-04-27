@@ -2,49 +2,14 @@
 layout: default
 title: Yachts
 ---
+<h1>Yachts</h1>
 
-<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
-  {% for yacht in site.data.yachts.yachts %}
-  <div class="col">
-    <div class="card text-bg-light mb-3 w-auto">
-      <div class="card-header">{{ yacht.name }}</div>
-      <table class="table align-middle bg-white">
-        <tbody>
-          {% for yacht_data in site.data.yachts[yacht.name] %}
-          <tr>
-            <td style="width: 60%">{{ yacht_data.spec }}</td>
-            <td>
-              <div class="progress" style="height: 0.75rem !important">
-                <div
-                  class="progress-bar bg-info"
-                  role="progressbar"
-                  aria-label="spec"
-                  aria-valuenow="{{ yacht_data.value }}"
-                  style="width: 0%"
-                  aria-valuemin="0"
-                  aria-valuemax="{{ yacht_data.max_value }}"
-                ></div>
-              </div>
-            </td>
-          </tr>
-          {% endfor %}
-          <tr>
-            <td>Skipper:</td>
-            <td>{{ yacht.skipper }}</td>
-        </tbody>
-      </table>
-    </div>
-  </div>
+<ul>
+  {% for yacht in site.yachts %}
+    <li>
+      <h2><a href="{{ yacht.url }}">{{ yacht.name }}</a></h2>
+      <h3>{{ yacht.yacht }}</h3>
+      <p>{{ yacht.content | markdownify }}</p>
+    </li>
   {% endfor %}
-</div>
-
-<script>
-  var progressBars = document.getElementsByClassName("progress-bar");
-  for (var i = 0; i < progressBars.length; i++) {
-    var progressBar = progressBars[i];
-    var value = progressBar.getAttribute("aria-valuenow");
-    var maxValue = progressBar.getAttribute("aria-valuemax");
-    var percentage = (value / maxValue) * 100;
-    progressBar.style.width = percentage + "%";
-  }
-</script>
+</ul>

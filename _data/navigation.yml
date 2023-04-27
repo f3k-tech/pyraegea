@@ -1,6 +1,6 @@
 - name: Home
   link: /
+- name: Overview
+  link: /overview.html
 - name: Yachts
   link: /yachts.html
-- name: Skippers
-  link: /skippers.html

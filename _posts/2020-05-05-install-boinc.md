@@ -1,6 +1,6 @@
 ---
 title:  "BOINC from the CLI"
-skipper: Freek
+yacht: Freek
 tags: CLI linux ubuntu headless boinc
 cover: /assets/pictures/BOINC_logo.png
 ---

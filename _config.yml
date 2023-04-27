@@ -1,13 +1,13 @@
 collections:
-  skippers:
+  yachts:
     output: true
 
 defaults:
   - scope:
       path: ""
-      type: "skippers"
+      type: "yachts"
     values:
-      layout: "skipper"
+      layout: "yacht"
   - scope:
       path: ""
       type: "posts"
