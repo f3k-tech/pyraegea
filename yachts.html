@@ -8,7 +8,7 @@ title: Yachts
   {% for yacht in site.yachts %}
     <li>
       <h2><a href="{{ yacht.url }}">{{ yacht.name }}</a></h2>
-      <h3>{{ yacht.yacht }}</h3>
+      <h3>{{ yacht.skipper }}</h3>
       <p>{{ yacht.content | markdownify }}</p>
     </li>
   {% endfor %}
