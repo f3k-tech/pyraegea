@@ -1,3 +1,5 @@
+permalink: /:categories/:title/
+
 collections:
   yachts:
     output: true
