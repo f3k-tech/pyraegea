@@ -1,4 +1,4 @@
-baseurl: "/pyragea23"
+baseurl: "/pyraegea"
 permalink: /:categories/:title/
 
 collections:
