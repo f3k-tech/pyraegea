@@ -20,3 +20,6 @@ defaults:
       path: ""
     values:
       layout: "default"
+exclude:
+  - 'docker*'
+  - 'Docker*'
